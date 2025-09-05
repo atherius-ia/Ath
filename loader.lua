@@ -18,26 +18,11 @@
 ----------------------------------------------------------------------------
 ]]
 repeat task.wait() until game:IsLoaded()
-local meta = {
-    [2619619496] = {
-        title = "Bedwars",
-        dev = "vwdev/vwrw.lua",
-        script = "https://raw.githubusercontent.com/VapeVoidware/VWRewrite/main/NewMainScript.lua"
-    },
-    [7008097940] = {
-       title = "Ink Game",
-       dev = "vwdev/inkgame.lua",
-       script = "https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/inkgame.lua"
-    },
-    [6331902150] = {
-        title = "Forsaken",
-        dev = "vwdev/forsaken.lua",
-        script = "https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/forsaken.lua"
-    },
+local meta = 
     [7326934954] = {
         title = "99 Nights In The Forest",
         dev = "vwdev/nightsintheforest.lua",
-        script = "https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/nightsintheforest.lua"
+        script = "https://raw.githubusercontent.com/atherius-ia/Ath/main/nightsintheforest.lua"
     }
 }
 local data = meta[game.GameId]
