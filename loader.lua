@@ -36,7 +36,7 @@ local meta = {
     },
     [7326934954] = {
         title = "99 Nights In The Forest",
-        dev = "Ath/nightsintheforest.lua",
+        dev = "vwdev/nightsintheforest.lua",
         script = "https://raw.githubusercontent.com/atherius-ia/Ath/main/nightsintheforest.lua"
     }
 }
