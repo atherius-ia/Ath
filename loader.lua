@@ -1,24 +1,25 @@
 --[[
- █████╗ ████████╗██╗  ██╗███████╗██████╗ ██╗██╗   ██╗███████╗
-██╔══██╗╚══██╔══╝██║  ██║██╔════╝██╔══██╗██║██║   ██║██╔════╝
-███████║   ██║   ███████║█████╗  ██████╔╝██║██║   ██║███████╗
-██╔══██║   ██║   ██╔══██║██╔══╝  ██╔══██╗██║██║   ██║╚════██║
-██║  ██║   ██║   ██║  ██║███████╗██║  ██║██║╚██████╔╝███████║
-╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚══════╝
+██╗   ██╗ ██████╗ ██╗██████╗ ██╗    ██╗ █████╗ ██████╗ ███████╗
+██║   ██║██╔═══██╗██║██╔══██╗██║    ██║██╔══██╗██╔══██╗██╔════╝
+██║   ██║██║   ██║██║██║  ██║██║ █╗ ██║███████║██████╔╝█████╗  
+╚██╗ ██╔╝██║   ██║██║██║  ██║██║███╗██║██╔══██║██╔═══╝ ██╔══╝  
+ ╚████╔╝ ╚██████╔╝██║██████╔╝╚███╔███╔╝██║  ██║██║     ███████╗
+  ╚═══╝   ╚═════╝ ╚═╝╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝     ╚══════╝
 
-                🚀 Atherius — Loader 🚀
+                🚀 VOIDWARE — Loader 🚀
 ----------------------------------------------------------------------------
   IMPORTANT:
   You must copy and use the FULL script below. Do NOT press on the link.:
 
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/atherius-ia/Ath/main/loader.lua", true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))()
 
 ----------------------------------------------------------------------------
-  For support head over to 
+  For support head over to discord.gg/voidware
 ----------------------------------------------------------------------------
 ]]
 repeat task.wait() until game:IsLoaded()
 local meta = {
+    [2619619496] = {
         title = "Bedwars",
         dev = "vwdev/vwrw.lua",
         script = "https://raw.githubusercontent.com/VapeVoidware/VWRewrite/main/NewMainScript.lua"
@@ -35,21 +36,21 @@ local meta = {
     },
     [7326934954] = {
         title = "99 Nights In The Forest",
-        dev = "ath/nightsintheforest.lua",
-        script = "https://raw.githubusercontent.com/atherius-ia/Ath/main/nightsintheforest.lua"
+        dev = "vwdev/nightsintheforest.lua",
+        script = "https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/nightsintheforest.lua"
     }
 }
 local data = meta[game.GameId]
 if not data then
     game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "Atherius | Loader",
+        Title = "Voidware | Loader",
         Text = "Unsupported game :c",
         Duration = 15
     })
     return
 else
     game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "Atherius | Loader",
+        Title = "Voidware | Loader",
         Text = "Loading for "..tostring(data.title).."...",
         Duration = 15
     })
@@ -61,15 +62,15 @@ else
     end
     if type(res) ~= "function" then
         game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "Atherius Loading Error",
+            Title = "Voidware Loading Error",
             Text = tostring(res),
             Duration = 15
         })
         task.delay(0.5, function()
             if shared.VoidDev then return end
             game:GetService("StarterGui"):SetCore("SendNotification", {
-                Title = "Atherius Loading Error",
-                Text = "Please report this issue to erchodev#0 \n",
+                Title = "Voidware Loading Error",
+                Text = "Please report this issue to erchodev#0 \n or in discord.gg/voidware",
                 Duration = 15
             })
         end)
@@ -77,15 +78,15 @@ else
         local suc, err = pcall(res)
         if not suc then
             game:GetService("StarterGui"):SetCore("SendNotification", {
-                Title = "Atherius Main Error",
+                Title = "Voidware Main Error",
                 Text = tostring(err),
                 Duration = 15
             })
             task.delay(0.5, function()
                 if shared.VoidDev then return end
                 game:GetService("StarterGui"):SetCore("SendNotification", {
-                    Title = "Atherius Main Error",
-                    Text = "Please report this issue to erchodev#0 \n",
+                    Title = "Voidware Main Error",
+                    Text = "Please report this issue to erchodev#0 \n or in discord.gg/voidware",
                     Duration = 15
                 })
             end)
