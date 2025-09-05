@@ -1,20 +1,20 @@
 --[[
-██╗   ██╗ ██████╗ ██╗██████╗ ██╗    ██╗ █████╗ ██████╗ ███████╗
-██║   ██║██╔═══██╗██║██╔══██╗██║    ██║██╔══██╗██╔══██╗██╔════╝
-██║   ██║██║   ██║██║██║  ██║██║ █╗ ██║███████║██████╔╝█████╗  
-╚██╗ ██╔╝██║   ██║██║██║  ██║██║███╗██║██╔══██║██╔═══╝ ██╔══╝  
- ╚████╔╝ ╚██████╔╝██║██████╔╝╚███╔███╔╝██║  ██║██║     ███████╗
-  ╚═══╝   ╚═════╝ ╚═╝╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝     ╚══════╝
+ █████╗ ████████╗██╗  ██╗███████╗██████╗ ██╗██╗   ██╗███████╗
+██╔══██╗╚══██╔══╝██║  ██║██╔════╝██╔══██╗██║██║   ██║██╔════╝
+███████║   ██║   ███████║█████╗  ██████╔╝██║██║   ██║███████╗
+██╔══██║   ██║   ██╔══██║██╔══╝  ██╔══██╗██║██║   ██║╚════██║
+██║  ██║   ██║   ██║  ██║███████╗██║  ██║██║╚██████╔╝███████║
+╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚══════╝
 
-                🚀 VOIDWARE — Loader 🚀
+                🚀 Atherius — Loader 🚀
 ----------------------------------------------------------------------------
   IMPORTANT:
   You must copy and use the FULL script below. Do NOT press on the link.:
 
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/atherius-ia/Ath/main/loader.lua", true))()
 
 ----------------------------------------------------------------------------
-  For support head over to discord.gg/voidware
+  For support head over to 
 ----------------------------------------------------------------------------
 ]]
 repeat task.wait() until game:IsLoaded()
@@ -36,21 +36,21 @@ local meta = {
     },
     [7326934954] = {
         title = "99 Nights In The Forest",
-        dev = "vwdev/nightsintheforest.lua",
+        dev = "ath/nightsintheforest.lua",
         script = "https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/nightsintheforest.lua"
     }
 }
 local data = meta[game.GameId]
 if not data then
     game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "Voidware | Loader",
+        Title = "Atherius | Loader",
         Text = "Unsupported game :c",
         Duration = 15
     })
     return
 else
     game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "Voidware | Loader",
+        Title = "Atherius | Loader",
         Text = "Loading for "..tostring(data.title).."...",
         Duration = 15
     })
@@ -62,15 +62,15 @@ else
     end
     if type(res) ~= "function" then
         game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "Voidware Loading Error",
+            Title = "Atherius Loading Error",
             Text = tostring(res),
             Duration = 15
         })
         task.delay(0.5, function()
             if shared.VoidDev then return end
             game:GetService("StarterGui"):SetCore("SendNotification", {
-                Title = "Voidware Loading Error",
-                Text = "Please report this issue to erchodev#0 \n or in discord.gg/voidware",
+                Title = "Atherius Loading Error",
+                Text = "Please report this issue to erchodev#0",
                 Duration = 15
             })
         end)
@@ -78,15 +78,15 @@ else
         local suc, err = pcall(res)
         if not suc then
             game:GetService("StarterGui"):SetCore("SendNotification", {
-                Title = "Voidware Main Error",
+                Title = "Atherius Main Error",
                 Text = tostring(err),
                 Duration = 15
             })
             task.delay(0.5, function()
                 if shared.VoidDev then return end
                 game:GetService("StarterGui"):SetCore("SendNotification", {
-                    Title = "Voidware Main Error",
-                    Text = "Please report this issue to erchodev#0 \n or in discord.gg/voidware",
+                    Title = "Atherius Main Error",
+                    Text = "Please report this issue to erchodev#0",
                     Duration = 15
                 })
             end)
