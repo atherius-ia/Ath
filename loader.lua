@@ -18,7 +18,7 @@
 ----------------------------------------------------------------------------
 ]]
 repeat task.wait() until game:IsLoaded()
-local meta = 
+local meta = {
     [7326934954] = {
         title = "99 Nights In The Forest",
         dev = "vwdev/nightsintheforest.lua",
