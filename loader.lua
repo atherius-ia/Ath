@@ -19,10 +19,6 @@
 ]]
 repeat task.wait() until game:IsLoaded()
 local meta = {
-        title = "Bedwars",
-        dev = "vwdev/vwrw.lua",
-        script = "https://raw.githubusercontent.com/VapeVoidware/VWRewrite/main/NewMainScript.lua"
-    },
     [7008097940] = {
        title = "Ink Game",
        dev = "vwdev/inkgame.lua",
